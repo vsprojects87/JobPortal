@@ -30,12 +30,23 @@ namespace JobPortal.User
                 {
                     lblMsg.Visible=true;
                     lblMsg.Text = "Thanks for reaching out, will look into your query !";
+                    lblMsg.CssClass = "alert alert-success";
                     clear();
+                }
+                else
+                {
+                    lblMsg.Visible = true;
+                    lblMsg.Text = "Cannot save record right now, please try after some time";
+                    lblMsg.CssClass = "alert alert-danger";
                 }
             }
             catch (Exception ex)
             {
-               
+                Response.Write("<script>alert('"+ex.Message+"');</script>");
+            }
+            finally
+            {
+                con.Close();
             }
         }
 
