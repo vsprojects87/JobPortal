@@ -23,21 +23,21 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <asp:Label ID="Label1" runat="server">UserName</asp:Label>
-                                    <asp:TextBox ID="txtUnserName" runat="server" CssClass="form-control" placeholder="Enter unique Username" required></asp:TextBox>
+                                    <asp:TextBox ID="txtUserName" runat="server" CssClass="form-control" placeholder="Enter unique Username" required></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
 
                                     <asp:Label ID="Label2" runat="server">Password</asp:Label>
-                                    <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Enter Password" required></asp:TextBox>
+                                    <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Enter Password" TextMode="Password" required></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
 
                                     <asp:Label ID="Label3" runat="server">Confirm Password</asp:Label>
-                                    <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="form-control" placeholder="Re-Enter the Password" required></asp:TextBox>
+                                    <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="form-control" placeholder="Re-Enter the Password" TextMode="Password" required></asp:TextBox>
                                     <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Password must be same !" ControlToCompare="txtPassword" ControlToValidate="txtConfirmPassword" Display="Dynamic" ForeColor="Red" SetFocusOnError="true" Font-Size="Small"></asp:CompareValidator>
 
                                 </div>
@@ -89,7 +89,10 @@
 
                         </div>
                         <div class="form-group mt-3">
-                            <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="button button-contactForm boxed-btn" OnClick="btnRegister_Click" />
+                            <asp:Button ID="btnRegister" runat="server" Text="Register" CssClass="button button-contactForm boxed-btn mr-4" OnClick="btnRegister_Click" />
+
+
+                            <span class="clickLink"><a href="../User/Login.aspx">Already Register Click Here ...</a></span>
 
                         </div>
                     </div>
