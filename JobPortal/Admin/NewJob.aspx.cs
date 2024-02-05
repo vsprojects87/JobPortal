@@ -1,6 +1,8 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Web.UI.WebControls;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace JobPortal.Admin
@@ -40,10 +42,11 @@ namespace JobPortal.Admin
                     {
                         txtJobTitle.Text = sdr["Title"].ToString();
                         txtNoOfPost.Text = sdr["NoOfPost"].ToString();
-                        txtDescription.Text = sdr["Description"].ToString();
+                        //txtDescription.Text = (sdr.GetString("Description")).;
+                        txtDescription.Text = sdr[3].ToString();
                         txtQualification.Text = sdr["Qualification"].ToString();
                         txtExperience.Text = sdr["Experience"].ToString();
-                        txtSpecialization.Text = sdr["Sepcialization"].ToString();
+                        txtSpecialization.Text = sdr["Specialization"].ToString();
                         txtLastDate.Text = Convert.ToDateTime( sdr["LastDateTOApply"]).ToString("yyyy-MM-dd");
                         txtSalary.Text = sdr["Salary"].ToString();
                         ddlJobType.SelectedValue = sdr["JobType"].ToString();
@@ -96,8 +99,8 @@ namespace JobPortal.Admin
                         concatQuery = string.Empty;
                     }
                     query = @"Update Jobs set Title=@Title, NoOfPost=@NoOfPost, Description=@Description, Qualification=@Qualification, Experience=@Experience,
-                            Sepcialization=@Sepcialization, LastDateTOApply=@LastDateTOApply, Salary=@Salary, JobType=@JobType, CompanyName=@CompanyName,
-                            " + concatQuery + @"Website=@Website, Email=@Email, Address=@Address, Country=@Country, State=@State where JobId=@id";
+                            Specialization=@Specialization, LastDateTOApply=@LastDateTOApply, Salary=@Salary, JobType=@JobType, CompanyName=@CompanyName,
+                            " + concatQuery +"Website=@Website, Email=@Email, Address=@Address, Country=@Country, State=@State where JobId=@id";
 
                     type = "updated";
                     cmd = new SqlCommand(query, con);
@@ -106,7 +109,7 @@ namespace JobPortal.Admin
                     cmd.Parameters.AddWithValue("@Description", txtDescription.Text.Trim());
                     cmd.Parameters.AddWithValue("@Qualification", txtQualification.Text.Trim());
                     cmd.Parameters.AddWithValue("@Experience", txtExperience.Text.Trim());
-                    cmd.Parameters.AddWithValue("@Sepcialization", txtSpecialization.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Specialization", txtSpecialization.Text.Trim());
                     cmd.Parameters.AddWithValue("@LastDateTOApply", txtLastDate.Text.Trim());
                     cmd.Parameters.AddWithValue("@Salary", txtSalary.Text.Trim());
                     cmd.Parameters.AddWithValue("@JobType", ddlJobType.SelectedValue);
@@ -143,7 +146,7 @@ namespace JobPortal.Admin
                 }
                 else
                 {
-                    query = @"Insert into Jobs values(@Title,@NoOfPost,@Description,@Qualification,@Experience,@Sepcialization,@LastDateTOApply,
+                    query = @"Insert into Jobs values(@Title,@NoOfPost,@Description,@Qualification,@Experience,@Specialization,@LastDateTOApply,
                         @Salary,@JobType,@CompanyName,@CompanyImage,@Website,@Email,@Address,@Country,@State,@CreateDate)";
                     type = "saved";
                     DateTime time = DateTime.Now;
@@ -153,7 +156,7 @@ namespace JobPortal.Admin
                     cmd.Parameters.AddWithValue("@Description", txtDescription.Text.Trim());
                     cmd.Parameters.AddWithValue("@Qualification", txtQualification.Text.Trim());
                     cmd.Parameters.AddWithValue("@Experience", txtExperience.Text.Trim());
-                    cmd.Parameters.AddWithValue("@Sepcialization", txtSpecialization.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Specialization", txtSpecialization.Text.Trim());
                     cmd.Parameters.AddWithValue("@LastDateTOApply", txtLastDate.Text.Trim());
                     cmd.Parameters.AddWithValue("@Salary", txtSalary.Text.Trim());
                     cmd.Parameters.AddWithValue("@JobType", ddlJobType.SelectedValue);
