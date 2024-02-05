@@ -8,8 +8,8 @@
         <div class="main-body">
 
 
-            <asp:DataList runat="server" ID="dlProfile">
-                <itemtemplate>
+            <asp:DataList runat="server" ID="dlProfile" Width="100%" OnItemCommand="dlProfile_ItemCommand">
+                <ItemTemplate>
                     <div class="row gutters-sm">
                         <div class="col-md-4 mb-3">
                             <div class="card">
@@ -17,10 +17,10 @@
                                     <div class="d-flex flex-column align-items-center text-center">
                                         <img src="https://bootdev.com/img/Content/avatar/avatar7.png" alt="UserPic" class="rounded-circle" width="150" />
                                         <div class="mt-3">
-                                            <h4 class="text-capitalize">Full Name</h4>
-                                            <p class="text-secondary mb-1">@Username</p>
+                                            <h4 class="text-capitalize"><%#Eval("Name") %></h4>
+                                            <p class="text-secondary mb-1">@<%#Eval("Username")%></p>
                                             <p class="text-muted font-size-sm text-capitalize">
-                                                <i class="fas da-map-marker-alt"></i>Country
+                                                <i class="fas da-map-marker-alt"></i> <%#Eval("State") %>
                                             </p>
                                         </div>
                                     </div>
@@ -36,7 +36,7 @@
                                             <h6 class="mb-0">Full Name</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary text-capitalize">
-                                            User Name
+                                            <%#Eval("Name") %>
                                         </div>
                                     </div>
                                     <hr />
@@ -45,7 +45,7 @@
                                             <h6 class="mb-0">Email</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary text-capitalize">
-                                            Email
+                                            <%#Eval("Email") %>
                                         </div>
                                     </div>
                                     <hr />
@@ -54,7 +54,7 @@
                                             <h6 class="mb-0">Mobile</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary text-capitalize">
-                                            Mobile
+                                            <%#Eval("Mobile") %>
                                         </div>
                                     </div>
                                     <hr />
@@ -63,7 +63,7 @@
                                             <h6 class="mb-0">Address</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary text-capitalize">
-                                            Address
+                                            <%#Eval("Address") %>
                                         </div>
                                     </div>
                                     <hr />
@@ -72,13 +72,14 @@
                                             <h6 class="mb-0">Resume Upload</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary text-capitalize">
-                                            Resume
+                                            <%#Eval("Resume") == DBNull.Value ? "Not Uploaded" : "Uploaded" %>
+                                            <%--if we have uploaded the resume then it will return uploaded otherwise will display not uploaded--%>
                                         </div>
                                     </div>
                                     <hr />
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="button button-contactForm boxed-btn" CommandName="EditUserProfile" CommandArgument="" />
+                                            <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="button button-contactForm boxed-btn" CommandName="EditUserProfile" CommandArgument=' <%#Eval("Username") %> ' />
                                         </div>
                                     </div>
 
@@ -88,7 +89,7 @@
                         </div>
 
                     </div>
-                </itemtemplate>
+                </ItemTemplate>
             </asp:DataList>
 
 

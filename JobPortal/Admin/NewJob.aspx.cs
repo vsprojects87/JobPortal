@@ -85,7 +85,7 @@ namespace JobPortal.Admin
                 {
                     if (fuComponyLogo.HasFile)
                     {
-                        if (IsValidExtention(fuComponyLogo.FileName))
+                        if (Utils.IsValidExtention(fuComponyLogo.FileName))
                         {
                             concatQuery = "CompanyImage=@CompanyImage, ";
                         }
@@ -122,7 +122,7 @@ namespace JobPortal.Admin
                     cmd.Parameters.AddWithValue("@id", Request.QueryString["id"].ToString());
                     if (fuComponyLogo.HasFile)
                     {
-                        if (IsValidExtention(fuComponyLogo.FileName))
+                        if (Utils.IsValidExtention(fuComponyLogo.FileName))
                         {
                             Guid obj = new Guid();
                             imagePath = "Images/" + obj.ToString() + fuComponyLogo.FileName;
@@ -169,7 +169,7 @@ namespace JobPortal.Admin
                     cmd.Parameters.AddWithValue("@CreateDate", time.ToString("yyyy-MM-dd HH:mm:ss"));
                     if (fuComponyLogo.HasFile)
                     {
-                        if (IsValidExtention(fuComponyLogo.FileName))
+                        if (Utils.IsValidExtention(fuComponyLogo.FileName))
                         {
                             Guid obj = new Guid();
                             imagePath = "Images/" + obj.ToString() + fuComponyLogo.FileName;
@@ -226,23 +226,23 @@ namespace JobPortal.Admin
         //when we will execute the query we will show that variable dynamically
         // in if part where we have requested id which is clarly telling we are updating the record we are already have image so we are
         // concatinationg the previous image path otherwise if we dont have any image then we can select new
+        // we have created seperate class Util to check extentions
 
 
-
-        private bool IsValidExtention(string fileName)
-        {
-            bool isValid = false;
-            string[] filExtentions = { ".jpg", ".jpeg", ".png" };
-            for (int i = 0; i <= filExtentions.Length - 1; i++)
-            {
-                if (fileName.Contains(filExtentions[i]))
-                {
-                    isValid = true;
-                    break;
-                }
-            }
-            return isValid;
-        }
+        //private bool IsValidExtention(string fileName)
+        //{
+        //    bool isValid = false;
+        //    string[] filExtentions = { ".jpg", ".jpeg", ".png" };
+        //    for (int i = 0; i <= filExtentions.Length - 1; i++)
+        //    {
+        //        if (fileName.Contains(filExtentions[i]))
+        //        {
+        //            isValid = true;
+        //            break;
+        //        }
+        //    }
+        //    return isValid;
+        //}
         // this is checking whether the extention is valid or not
 
         private void clear()
