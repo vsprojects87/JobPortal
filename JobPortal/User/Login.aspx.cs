@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace JobPortal.User
 {
@@ -29,8 +24,8 @@ namespace JobPortal.User
                 if (ddlLoginType.SelectedValue == "Admin")
                 {
                     username = ConfigurationManager.AppSettings["username"];
-                    password = ConfigurationManager.AppSettings["password"];    
-                    if(username== txtUserName.Text.Trim() && password== txtPassword.Text.Trim())
+                    password = ConfigurationManager.AppSettings["password"];
+                    if (username == txtUserName.Text.Trim() && password == txtPassword.Text.Trim())
                     {
                         Session["admin"] = username;
                         Response.Redirect("../Admin/Dashboard.aspx", false);
@@ -40,7 +35,8 @@ namespace JobPortal.User
                         showErrorMsg("admin");
                     }
                 }
-                else{
+                else
+                {
                     string query = @"Select * from [User] where Username=@Username and Password=@Password";
                     cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@Username", txtUserName.Text.Trim());
@@ -60,7 +56,7 @@ namespace JobPortal.User
                     con.Close();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
                 con.Close();

@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Web;
-using System.Web.Services.Description;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Xml.Linq;
 
 namespace JobPortal.User
 {
@@ -54,10 +46,10 @@ namespace JobPortal.User
             }
             catch (SqlException ex)
             {
-                if(ex.Message.Contains("Violation of UNIQUE KEY constraint"))
+                if (ex.Message.Contains("Violation of UNIQUE KEY constraint"))
                 {
                     lblMsg.Visible = true;
-                    lblMsg.Text = "<b>"+txtUserName.Text.Trim()+" </b> username already exist";
+                    lblMsg.Text = "<b>" + txtUserName.Text.Trim() + " </b> username already exist";
                     lblMsg.CssClass = "alert alert-danger";
                 }
                 else
@@ -78,12 +70,12 @@ namespace JobPortal.User
         private void clear()
         {
             txtUserName.Text = string.Empty;
-            txtPassword.Text=string.Empty;
+            txtPassword.Text = string.Empty;
             txtFullName.Text = string.Empty;
             txtAddress.Text = string.Empty;
-            txtEmail.Text=string.Empty;
-            txtMobile.Text=string.Empty;
-            txtConfirmPassword.Text=string.Empty;
+            txtEmail.Text = string.Empty;
+            txtMobile.Text = string.Empty;
+            txtConfirmPassword.Text = string.Empty;
             ddlState.ClearSelection();
         }
     }

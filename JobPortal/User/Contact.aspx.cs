@@ -19,16 +19,16 @@ namespace JobPortal.User
             try
             {
                 string query = @"insert into Contact values(@Name,@Email,@Subject,@Message)";
-                cmd=new SqlCommand(query, con);
+                cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@Name", name.Value.Trim());
                 cmd.Parameters.AddWithValue("@Email", email.Value.Trim());
                 cmd.Parameters.AddWithValue("@Subject", subject.Value.Trim());
                 cmd.Parameters.AddWithValue("@Message", message.Value.Trim());
                 con.Open();
                 int r = cmd.ExecuteNonQuery();
-                if(r>0)
+                if (r > 0)
                 {
-                    lblMsg.Visible=true;
+                    lblMsg.Visible = true;
                     lblMsg.Text = "Thanks for reaching out, will look into your query !";
                     lblMsg.CssClass = "alert alert-success";
                     clear();
@@ -42,7 +42,7 @@ namespace JobPortal.User
             }
             catch (Exception ex)
             {
-                Response.Write("<script>alert('"+ex.Message+"');</script>");
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
             finally
             {

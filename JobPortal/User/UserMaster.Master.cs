@@ -20,7 +20,7 @@ namespace JobPortal.User
 
         protected void lbRegisterOrProfile_Click(object sender, EventArgs e)
         {
-            if(lbRegisterOrProfile.Text == "Profile")
+            if (lbRegisterOrProfile.Text == "Profile")
             {
                 Response.Redirect("Profile.aspx");
             }
