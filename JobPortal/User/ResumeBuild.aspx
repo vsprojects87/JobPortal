@@ -16,12 +16,12 @@
                     <h2 class="contact-title">Build Resume</h2>
                 </div>
 
-                <div class="col-lg-6 mx-auto">
+                <div class="col-lg-12">
                     <div class="form-contact contact_form">
                         <div class="row">
                             <div class="col-12">Personal Information</div>
 
-                            <div class="col-12">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <asp:Label ID="Label4" runat="server">Full Name</asp:Label>
                                     <asp:TextBox ID="txtFullName" runat="server" CssClass="form-control" placeholder="Enter the FullName" required></asp:TextBox>
@@ -30,21 +30,21 @@
                             </div>
 
 
-                            <div class="col-12">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <asp:Label ID="Label1" runat="server">UserName</asp:Label>
                                     <asp:TextBox ID="txtUserName" runat="server" CssClass="form-control" placeholder="Enter unique Username" required></asp:TextBox>
                                 </div>
                             </div>
 
-                            <div class="col-12">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <asp:Label ID="Label5" runat="server">Address</asp:Label>
                                     <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" placeholder="Address" required></asp:TextBox>
                                 </div>
                             </div>
 
-                            <div class="col-12">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <asp:Label ID="Label6" runat="server">Mobile Number</asp:Label>
                                     <asp:TextBox ID="txtMobile" runat="server" CssClass="form-control" placeholder="Mobile Number" required></asp:TextBox>
@@ -52,14 +52,14 @@
                                 </div>
                             </div>
 
-                            <div class="col-12">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <asp:Label ID="Label7" runat="server">Email</asp:Label>
                                     <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email" TextMode="Email" required></asp:TextBox>
                                 </div>
                             </div>
 
-                            <div class="col-12">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="form-group">
                                     <asp:Label ID="Label8" runat="server">State</asp:Label>
                                     <asp:DropDownList ID="ddlState" runat="server" DataSourceID="SqlDataSource1" CssClass="form-control w-100" DataTextField="CountryName" DataValueField="CountryName">
@@ -141,8 +141,6 @@
 
                         <div class="form-group mt-3">
                             <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="button button-contactForm boxed-btn mr-4" OnClick="btnUpdate_Click" />
-
-                            <span class="clickLink"><a href="../User/Login.aspx">Already Register Click Here ...</a></span>
 
                         </div>
                     </div>

@@ -32,14 +32,21 @@ namespace JobPortal.User
 
         private void showUserProfile()
         {
-            string query = "Select UserId, Username, Name, Address, Mobile , Email, State, Resume from [User] where UserName=@Username";
+            string query = "Select UserId, Username, Name, Address, Mobile , Email, State, Resume from [User] where Username=@Username";
             cmd= new SqlCommand(query,con);
             cmd.Parameters.AddWithValue("@Username", Session["user"]);
             adapter = new SqlDataAdapter(cmd);
             dt= new DataTable();
             adapter.Fill(dt);
-            dlProfile.DataSource = dt;
-            dlProfile.DataBind();
+            if (dt != null)
+            {
+                dlProfile.DataSource = dt;
+                dlProfile.DataBind();
+            }
+            else
+            {
+                Response.Write("<script>alert('Please Login again with new username');</script>");
+            }
         }
 
         protected void dlProfile_SelectedIndexChanged(object sender, EventArgs e)
