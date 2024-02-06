@@ -198,8 +198,8 @@ namespace JobPortal.User
             if (RadioButtonList1.SelectedValue != "0")
             {
                 string postedDate = string.Empty;
-                postedDate = selectedCheckbox();
-                string query = @"Select JobId, Title, Salary, JobType, CompanyName,CompanyImage, Country,State, CreateDate from Jobs where Convert(DATE,CreateDate)"+postedDate+"";
+                postedDate = selectedRadioButton();
+                string query = @"Select JobId, Title, Salary, JobType, CompanyName,CompanyImage, Country,State, CreateDate from Jobs where Convert(DATE,CreateDate) "+postedDate+" ";
                 cmd = new SqlCommand(query, con);
                 adapter = new SqlDataAdapter(cmd);
                 dt = new DataTable();
