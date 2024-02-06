@@ -3,6 +3,144 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceholder1" runat="server">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
+        rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        .checkbox {
+            padding-left: 20px;
+        }
+
+
+            .checkbox label {
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+                padding-left: 5px;
+            }
+
+
+                .checkbox label::before {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    width: 17px;
+                    height: 17px;
+                    left: 0;
+                    margin-left: -20px;
+                    border: 1px solid #cccccc;
+                    border-radius: 3px;
+                    background-color: #fff;
+                    -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+                    -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+                    transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+                }
+
+
+                .checkbox label::after {
+                    display: inline-block;
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    left: 0;
+                    top: 0;
+                    margin-left: -20px;
+                    padding-left: 3px;
+                    padding-top: 1px;
+                    font-size: 11px;
+                    color: #FF4357;
+                }
+
+
+            .checkbox input[type="checkbox"] {
+                opacity: 0;
+                z-index: 1;
+            }
+
+
+                .checkbox input[type="checkbox"]:checked + label::after {
+                    font-family: "FontAwesome";
+                    content: "\f00c";
+                }
+
+
+        .checkbox-primary input[type="checkbox"]:checked + label::before {
+            background-color: #FF4357;
+            border-color: #FF4357;
+        }
+
+
+        .checkbox-primary input[type="checkbox"]:checked + label::after {
+            color: #fff;
+        }
+    </style>
+
+    <style>
+        .radiobuttonlist {
+            font: 12px Verdana, sans-serif;
+            color: #000; /* non selected color */
+        }
+
+
+            .radiobuttonlist input {
+                width: 0px;
+                height: 20px;
+            }
+
+
+            .radiobuttonlist label {
+                color: #FF4357;
+                background-color: #FFF;
+                padding-left: 6px;
+                padding-right: 6px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                border: 1px solid #FF4357;
+                border-radius: 10%;
+                margin: 0px 0px 0px 0px;
+                white-space: nowrap;
+                clear: left;
+                margin-right: 5px;
+            }
+
+
+            .radiobuttonlist span.selectedradio label {
+                background-color: #FF4357;
+                color: #FFF;
+                font-weight: bold;
+                border-bottom-color: #F3F2E7;
+                padding-top: 4px;
+            }
+
+
+            .radiobuttonlist label:hover {
+                color: #CC3300;
+                background: #D1CFC2;
+            }
+
+
+        .radiobuttoncontainer {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        .radiobuttonbackground {
+            position: relative;
+            z-index: 0;
+            border: solid 1px #AcA899;
+            padding: 10px;
+            background-color: #F3F2E7;
+        }
+    </style>
+
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+
     <main>
 
     <!-- Hero Area Start-->
