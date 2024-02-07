@@ -7,16 +7,27 @@
     <div style="background-image: url('../Images/bg.jpg'); width: 100%; height: 700px; background-repeat: no-repeat; background-size: cover; background-attachment: fixed">
 
         <div class="container-fluid pt-4 pb-4">
-            <div>
+            <%--<div>
                 <asp:Label ID="lblMsg" runat="server" Text="Label"></asp:Label>
+            </div>--%>
+
+            <div class="btn-toolbar justify-content-between mb-3">
+                <div class="btn-group">
+                    <asp:Label ID="lblMsg" runat="server" Text="Label"></asp:Label>
+                </div>
+                <div class="input-group h-25">
+                    <asp:HyperLink ID="linkback" runat="server" NavigateUrl="~/Admin/ViewResume.aspx" CssClass="btn btn-secondary" Visible="false">< Back</asp:HyperLink>
+                </div>
             </div>
+            <%--when we will be redirected to joblist page when we will click on appliedjob gridview row this will enable the back button to go back to resume
+            page--%>
 
             <h3 class="text-center">Job List</h3>
 
             <div class="row mb-3 pt-sm-3">
                 <div class="col-md-12">
 
-                    <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover table-bordered" EmptyDataText="No Records to Display..!" AutoGenerateColumns="false" AllowPaging="true" PageSize="5" DataKeyNames="JobId" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDeleting="GridView1_RowDeleting" OnRowCommand="GridView1_RowCommand">
+                    <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover table-bordered" EmptyDataText="No Records to Display..!" AutoGenerateColumns="false" AllowPaging="true" PageSize="5" DataKeyNames="JobId" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDeleting="GridView1_RowDeleting" OnRowCommand="GridView1_RowCommand" OnRowDataBound="GridView1_RowDataBound">
                         <Columns>
                             <asp:BoundField DataField="Sr.No" HeaderText="Sr.No">
                                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
@@ -62,10 +73,10 @@
                             <asp:TemplateField HeaderText="Edit">
                                 <ItemTemplate>
                                     <asp:LinkButton ID="LinkButton1" runat="server" CommandName="EditJob" CommandArgument='<%#Eval("JobId") %>'>
-                                        <asp:Image Id="Img" runat="server" ImageUrl="~/assets/img/icon/job-list3.png" Height="25px"/>
+                                        <asp:Image ID="Img" runat="server" ImageUrl="~/assets/img/icon/job-list3.png" Height="25px" />
                                     </asp:LinkButton>
                                 </ItemTemplate>
-                                <ItemStyle HorizontalAlign="Center" Width="50px"/>
+                                <ItemStyle HorizontalAlign="Center" Width="50px" />
                             </asp:TemplateField>
 
                             <asp:CommandField CausesValidation="false" HeaderText="Delete" ShowDeleteButton="true" DeleteImageUrl="../assets/img/icon/job-list4.png">

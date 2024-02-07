@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Web.UI.WebControls;
 
 namespace JobPortal.Admin
@@ -37,7 +38,12 @@ namespace JobPortal.Admin
             sda.Fill(dt);
             GridView1.DataSource = dt;
             GridView1.DataBind();
-
+            if (Request.QueryString["id"] != null)
+            {
+                linkback.Visible = true;
+            }
+            // basically when the id will be pass to this page that means we have been redirected from resume page we want linkback button to be visible
+            // to go back to resume page
         }
 
         protected void GridView1_PageIndexChanging(object sender, System.Web.UI.WebControls.GridViewPageEventArgs e)
@@ -90,5 +96,22 @@ namespace JobPortal.Admin
                 //- and we will be making changes of updation in newjob.aspx
             }
         }
+
+        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                e.Row.ID = e.Row.RowIndex.ToString();
+                if (Request.QueryString["id"] != null)
+                {
+                    int jobId = Convert.ToInt32(GridView1.DataKeys[e.Row.RowIndex].Values[0]);
+                    if (jobId == Convert.ToInt32(Request.QueryString["id"])) 
+                    {
+                        e.Row.BackColor = ColorTranslator.FromHtml("#A1DCF2");
+                    }
+                }
+            }
+        }
+        // when we will click on applied job in admin pannel then we will be redirected to joblist where the job we selected will be highlighted using above code 
     }
 }
