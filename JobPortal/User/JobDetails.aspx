@@ -98,7 +98,8 @@
                                         <li>Application date : <span><%#DataBinder.Eval(Container.DataItem,"LastDateToApply","{0:dd MMMM yyyy}") %></span></li>
                                     </ul>
                                     <div class="apply-btn2">
-                                        <a href="#" class="btn">Apply Now</a>
+                                        <%--<a href="#" class="btn">Apply Now</a>--%>
+                                        <asp:LinkButton ID="lbApplyJob" runat="server" CssClass="btn" Text="Apply Now" CommandName="ApplyJob"></asp:LinkButton>
                                     </div>
                                 </div>
                                 <div class="post-details4  mb-50">
@@ -106,13 +107,14 @@
                                     <div class="small-section-tittle">
                                         <h4>Company Information</h4>
                                     </div>
-                                    <span>Colorlib</span>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                    <span><%#Eval("CompanyName") %></span>
+                                    <p><b>Address : </b><%#Eval("Address") %></p>
                                     <ul>
                                         <li>Name: <span><%#Eval("CompanyName") %></span></li>
                                         <li>Web : <span><%#Eval("Website") %></span></li>
                                         <li>Email: <span><%#Eval("Email") %></span></li>
                                     </ul>
+                                    <asp:Label ID="lblApplied" runat="server" Visible="false" Text=""></asp:Label>
                                 </div>
                             </div>
                         </div>

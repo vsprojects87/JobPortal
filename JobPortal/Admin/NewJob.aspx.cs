@@ -1,9 +1,6 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Web.UI.WebControls;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace JobPortal.Admin
 {
@@ -33,7 +30,7 @@ namespace JobPortal.Admin
             if (Request.QueryString["id"] != null)
             {
                 query = "select * from Jobs where JobId='" + Request.QueryString["id"] + "' ";
-                cmd=new SqlCommand(query,con);
+                cmd = new SqlCommand(query, con);
                 con.Open();
                 SqlDataReader sdr = cmd.ExecuteReader();
                 if (sdr.HasRows)
@@ -47,7 +44,7 @@ namespace JobPortal.Admin
                         txtQualification.Text = sdr["Qualification"].ToString();
                         txtExperience.Text = sdr["Experience"].ToString();
                         txtSpecialization.Text = sdr["Specialization"].ToString();
-                        txtLastDate.Text = Convert.ToDateTime( sdr["LastDateTOApply"]).ToString("yyyy-MM-dd");
+                        txtLastDate.Text = Convert.ToDateTime(sdr["LastDateTOApply"]).ToString("yyyy-MM-dd");
                         txtSalary.Text = sdr["Salary"].ToString();
                         ddlJobType.SelectedValue = sdr["JobType"].ToString();
                         txtCompany.Text = sdr["CompanyName"].ToString();
@@ -100,7 +97,7 @@ namespace JobPortal.Admin
                     }
                     query = @"Update Jobs set Title=@Title, NoOfPost=@NoOfPost, Description=@Description, Qualification=@Qualification, Experience=@Experience,
                             Specialization=@Specialization, LastDateTOApply=@LastDateTOApply, Salary=@Salary, JobType=@JobType, CompanyName=@CompanyName,
-                            " + concatQuery +"Website=@Website, Email=@Email, Address=@Address, Country=@Country, State=@State where JobId=@id";
+                            " + concatQuery + "Website=@Website, Email=@Email, Address=@Address, Country=@Country, State=@State where JobId=@id";
 
                     type = "updated";
                     cmd = new SqlCommand(query, con);

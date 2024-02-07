@@ -1,16 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Net;
-using System.Reflection;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Xml.Linq;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace JobPortal.User
 {
@@ -111,13 +101,13 @@ namespace JobPortal.User
                     }
                     else
                     {
-                        concatQuery= string.Empty;
+                        concatQuery = string.Empty;
                     }
 
                     query = @"Update [user] set Username=@Username,Name=@Name, Email=@Email, Mobile=@Mobile, TenthGrade=@TenthGrade, 
                             TwelthGrade=@TwelthGrade, GraduationGrade=@GraduationGrade, PostGraduationGrade=@PostGraduationGrade,Phd=@Phd,
-                            WorksOn=@WorksOn,Experience=@Experience,"+concatQuery+"Address=@Address,State=@State where UserId=@UserId";
-                    cmd=new SqlCommand(query,con);
+                            WorksOn=@WorksOn,Experience=@Experience," + concatQuery + "Address=@Address,State=@State where UserId=@UserId";
+                    cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@Username", txtUserName.Text.Trim());
                     cmd.Parameters.AddWithValue("@Name", txtFullName.Text.Trim());
                     cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
@@ -134,9 +124,9 @@ namespace JobPortal.User
                     cmd.Parameters.AddWithValue("@UserId", Request.QueryString["id"]);
                     if (IsValid)
                     {
-                        Guid obj= Guid.NewGuid();
+                        Guid obj = Guid.NewGuid();
                         filePath = "Resumes/" + obj.ToString() + fuResume.FileName;
-                        fuResume.PostedFile.SaveAs(Server.MapPath("~/Resumes/")+obj.ToString()+fuResume.FileName);
+                        fuResume.PostedFile.SaveAs(Server.MapPath("~/Resumes/") + obj.ToString() + fuResume.FileName);
                         cmd.Parameters.AddWithValue("@resume", filePath);
                         //isValidToExecute = true;
                     }

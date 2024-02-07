@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace JobPortal.User
@@ -33,10 +29,10 @@ namespace JobPortal.User
         private void showUserProfile()
         {
             string query = "Select UserId, Username, Name, Address, Mobile , Email, State, Resume from [User] where Username=@Username";
-            cmd= new SqlCommand(query,con);
+            cmd = new SqlCommand(query, con);
             cmd.Parameters.AddWithValue("@Username", Session["user"]);
             adapter = new SqlDataAdapter(cmd);
-            dt= new DataTable();
+            dt = new DataTable();
             adapter.Fill(dt);
             if (dt != null)
             {
@@ -56,9 +52,9 @@ namespace JobPortal.User
 
         protected void dlProfile_ItemCommand(object source, DataListCommandEventArgs e)
         {
-            if(e.CommandName == "EditUserProfile")
+            if (e.CommandName == "EditUserProfile")
             {
-                Response.Redirect("ResumeBuild.aspx?id=" +e.CommandArgument.ToString());
+                Response.Redirect("ResumeBuild.aspx?id=" + e.CommandArgument.ToString());
             }
         }
     }

@@ -199,7 +199,7 @@ namespace JobPortal.User
             {
                 string postedDate = string.Empty;
                 postedDate = selectedRadioButton();
-                string query = @"Select JobId, Title, Salary, JobType, CompanyName,CompanyImage, Country,State, CreateDate from Jobs where Convert(DATE,CreateDate) "+postedDate+" ";
+                string query = @"Select JobId, Title, Salary, JobType, CompanyName,CompanyImage, Country,State, CreateDate from Jobs where Convert(DATE,CreateDate) " + postedDate + " ";
                 cmd = new SqlCommand(query, con);
                 adapter = new SqlDataAdapter(cmd);
                 dt = new DataTable();
@@ -230,17 +230,17 @@ namespace JobPortal.User
             }
             else if (RadioButtonList1.SelectedValue == "3")
             {
-                postedDate = "between Convert(DATE, '"+DateTime.Now.AddDays(-3).ToString("yyyy/MM/dd")+"') and Convert(DATE, '" + date.ToString("yyyy/MM/dd") + "')";
+                postedDate = "between Convert(DATE, '" + DateTime.Now.AddDays(-3).ToString("yyyy/MM/dd") + "') and Convert(DATE, '" + date.ToString("yyyy/MM/dd") + "')";
 
             }
             else if (RadioButtonList1.SelectedValue == "4")
             {
-                postedDate = "between Convert(DATE, '"+DateTime.Now.AddDays(-5).ToString("yyyy/MM/dd")+"') and Convert(DATE, '" + date.ToString("yyyy/MM/dd") + "')";
+                postedDate = "between Convert(DATE, '" + DateTime.Now.AddDays(-5).ToString("yyyy/MM/dd") + "') and Convert(DATE, '" + date.ToString("yyyy/MM/dd") + "')";
 
             }
             else
             {
-                postedDate = "between Convert(DATE, '"+DateTime.Now.AddDays(-10).ToString("yyyy/MM/dd")+"') and Convert(DATE, '" + date.ToString("yyyy/MM/dd") + "')";
+                postedDate = "between Convert(DATE, '" + DateTime.Now.AddDays(-10).ToString("yyyy/MM/dd") + "') and Convert(DATE, '" + date.ToString("yyyy/MM/dd") + "')";
 
             }
             return postedDate;
@@ -258,8 +258,8 @@ namespace JobPortal.User
                 string jobType = string.Empty;
                 string postedDate = string.Empty;
                 string addAnd = string.Empty;
-                List<string> querylist = new List<string>(); 
-                if(ddlCountry.SelectedValue!="0")
+                List<string> querylist = new List<string>();
+                if (ddlCountry.SelectedValue != "0")
                 {
                     querylist.Add("State= '" + ddlCountry.SelectedValue + "' ");
                     isCondition = true;
@@ -270,34 +270,34 @@ namespace JobPortal.User
                     querylist.Add("JobType IN ('" + jobType + "') ");
                     isCondition = true;
                 }
-                if(RadioButtonList1.SelectedValue != "0")
+                if (RadioButtonList1.SelectedValue != "0")
                 {
                     postedDate = selectedRadioButton();
                     querylist.Add("Convert (DATE,CreateDate) " + postedDate);
                     isCondition = true;
                 }
-                if(isCondition)
+                if (isCondition)
                 {
-                    foreach(string s in querylist)
+                    foreach (string s in querylist)
                     {
                         subQuery += s + "and";
                     }
                     subQuery = subQuery.Remove(subQuery.LastIndexOf("and"), 3);
-                    query = @"Select JobId, Title, Salary, JobType, CompanyName,CompanyImage, Country,State, CreateDate from Jobs where "+subQuery+" ";
+                    query = @"Select JobId, Title, Salary, JobType, CompanyName,CompanyImage, Country,State, CreateDate from Jobs where " + subQuery + " ";
                 }
                 else
                 {
                     query = @"Select JobId, Title, Salary, JobType, CompanyName,CompanyImage, Country,State, CreateDate from Jobs";
                 }
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);
-                dt=new DataTable();
+                dt = new DataTable();
                 sda.Fill(dt);
                 showJobList();
                 RBSelectedColorChange();
             }
             catch (Exception ex)
             {
-                Response.Write("<script>alert('"+ex.Message+ "')</script>");
+                Response.Write("<script>alert('" + ex.Message + "')</script>");
             }
             finally
             {
