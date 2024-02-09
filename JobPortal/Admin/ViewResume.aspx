@@ -46,9 +46,9 @@
 
                             <asp:TemplateField HeaderText="Resume">
                                 <ItemTemplate>
-                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="<%#DataBinder.Eval(Container,"DataItem.Resume","../{0}") %>">
+                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# DataBinder.Eval(Container,"DataItem.Resume","../{0}") %>'>
                                         <i class="fas fa-download"></i> Download
-                                        <asp:HiddenField ID="hdnJobID" runat="server" Value="<%#Eval("JobId") %>" Visible="false"/>
+                                        <asp:HiddenField ID="hdnJobID" runat="server" Value='<%#Eval("JobId")%>' Visible="false"/>
                                     </asp:HyperLink>
                                 </ItemTemplate>
                                 <ItemStyle HorizontalAlign="Center" Width="50px" />
