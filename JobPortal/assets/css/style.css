@@ -515,7 +515,7 @@ hr {
 
     .border-btn:hover::before {
         transform: scaleY(1);
-        order: 2px solid transparent
+        order: 2px solid transparent;
     }
 
 .post-btn {
