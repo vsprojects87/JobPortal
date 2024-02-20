@@ -14,3 +14,7 @@
 UnSolve Errors :
 1. Title not  showing for not having data in datatable 
 JobDetails.aspx  ->  showJobDetails -> commented  code
+
+Pending Work :
+
+1. Footer area links of github and portfolio linkedin

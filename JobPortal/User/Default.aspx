@@ -66,7 +66,7 @@
                             <span class="flaticon-tour"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="job_listing.html">Design & Creative</a></h5>
+                           <h5><a href="JobListing.aspx">Design & Creative</a></h5>
                             <span>(653)</span>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                             <span class="flaticon-cms"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="job_listing.html">Design & Development</a></h5>
+                           <h5><a href="JobListing.aspx">Design & Development</a></h5>
                             <span>(658)</span>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                             <span class="flaticon-report"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="job_listing.html">Sales & Marketing</a></h5>
+                           <h5><a href="JobListing.aspx">Sales & Marketing</a></h5>
                             <span>(658)</span>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                             <span class="flaticon-app"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="job_listing.html">Mobile Application</a></h5>
+                           <h5><a href="JobListing.aspx">Mobile Application</a></h5>
                             <span>(658)</span>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                             <span class="flaticon-helmet"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="job_listing.html">Construction</a></h5>
+                           <h5><a href="JobListing.aspx">Construction</a></h5>
                             <span>(658)</span>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
                             <span class="flaticon-high-tech"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="job_listing.html">Information Technology</a></h5>
+                           <h5><a href="JobListing.aspx">Information Technology</a></h5>
                             <span>(658)</span>
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                             <span class="flaticon-real-estate"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="job_listing.html">Real Estate</a></h5>
+                           <h5><a href="JobListing.aspx">Real Estate</a></h5>
                             <span>(658)</span>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                             <span class="flaticon-content"></span>
                         </div>
                         <div class="services-cap">
-                           <h5><a href="job_listing.html">Content Writer</a></h5>
+                           <h5><a href="JobListing.aspx">Content Writer</a></h5>
                             <span>(658)</span>
                         </div>
                     </div>
@@ -154,7 +154,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="browse-btn2 text-center mt-50">
-                        <a href="job_listing.html" class="border-btn2">Browse All Sectors</a>
+                        <a href="JobListing.aspx" class="border-btn2">Browse All Sectors</a>
                     </div>
                 </div>
             </div>
@@ -169,7 +169,7 @@
                     <div class="cv-caption text-center">
                         <p class="pera1">FEATURED TOURS Packages</p>
                         <p class="pera2"> Make a Difference with Your Online Resume!</p>
-                        <a href="#" class="border-btn2 border-btn4">Upload your cv</a>
+                        <a href="Profile.aspx" class="border-btn2 border-btn4">Upload your cv</a>
                     </div>
                 </div>
             </div>
@@ -194,10 +194,10 @@
                     <div class="single-job-items mb-30">
                         <div class="job-items">
                             <div class="company-img">
-                                <a href="job_details.html"><img src="../assets/img/icon/job-list1.png" alt=""></a>
+                                <a><img src="../assets/img/icon/job-list1.png" alt=""></a>
                             </div>
                             <div class="job-tittle">
-                                <a href="job_details.html"><h4>Digital Marketer</h4></a>
+                                <a href="JobListing.aspx"><h4>Digital Marketer</h4></a>
                                 <ul>
                                     <li>Creative Agency</li>
                                     <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
@@ -206,18 +206,18 @@
                             </div>
                         </div>
                         <div class="items-link f-right">
-                            <a href="job_details.html">Full Time</a>
-                            <span>7 hours ago</span>
+                            <a href="JobListing.aspx">Full Time</a>
+                            <span>9 hours ago</span>
                         </div>
                     </div>
                     <!-- single-job-content -->
                     <div class="single-job-items mb-30">
                         <div class="job-items">
                             <div class="company-img">
-                                <a href="job_details.html"><img src="../assets/img/icon/job-list2.png" alt=""></a>
+                                <a><img src="../assets/img/icon/job-list2.png" alt=""></a>
                             </div>
                             <div class="job-tittle">
-                                <a href="job_details.html"><h4>Digital Marketer</h4></a>
+                                <a href="JobListing.aspx"><h4>Digital Marketer</h4></a>
                                 <ul>
                                     <li>Creative Agency</li>
                                     <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
@@ -226,18 +226,18 @@
                             </div>
                         </div>
                         <div class="items-link f-right">
-                            <a href="job_details.html">Full Time</a>
-                            <span>7 hours ago</span>
+                            <a href="JobListing.aspx">Full Time</a>
+                            <span>12 hours ago</span>
                         </div>
                     </div>
                      <!-- single-job-content -->
                     <div class="single-job-items mb-30">
                         <div class="job-items">
                             <div class="company-img">
-                                <a href="job_details.html"><img src="../assets/img/icon/job-list3.png" alt=""></a>
+                                <a><img src="../assets/img/icon/job-list3.png" alt=""></a>
                             </div>
                             <div class="job-tittle">
-                                <a href="job_details.html"><h4>Digital Marketer</h4></a>
+                                <a href="JobListing.aspx"><h4>Digital Marketer</h4></a>
                                 <ul>
                                     <li>Creative Agency</li>
                                     <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
@@ -246,18 +246,18 @@
                             </div>
                         </div>
                         <div class="items-link f-right">
-                            <a href="job_details.html">Full Time</a>
-                            <span>7 hours ago</span>
+                            <a href="JobListing.aspx">Full Time</a>
+                            <span>14 hours ago</span>
                         </div>
                     </div>
                      <!-- single-job-content -->
                     <div class="single-job-items mb-30">
                         <div class="job-items">
                             <div class="company-img">
-                                <a href="job_details.html"><img src="../assets/img/icon/job-list4.png" alt=""></a>
+                                <a><img src="../assets/img/icon/job-list4.png" alt=""></a>
                             </div>
                             <div class="job-tittle">
-                                <a href="job_details.html"><h4>Digital Marketer</h4></a>
+                                <a href="JobListing.aspx"><h4>Digital Marketer</h4></a>
                                 <ul>
                                     <li>Creative Agency</li>
                                     <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
@@ -266,8 +266,8 @@
                             </div>
                         </div>
                         <div class="items-link f-right">
-                            <a href="job_details.html">Full Time</a>
-                            <span>7 hours ago</span>
+                            <a href="JobListing.aspx">Full Time</a>
+                            <span>18 hours ago</span>
                         </div>
                     </div>
                 </div>
@@ -393,8 +393,8 @@
      <!-- Support Company Start-->
      <div class="support-company-area support-padding fix">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-6">
+            <div class="row align-items-center mb-30">
+                <div class="col-xl-7 col-lg-6">
                     <div class="right-caption">
                         <!-- Section Tittle -->
                         <div class="section-tittle section-tittle2">
@@ -404,78 +404,21 @@
                         <div class="support-caption">
                             <p class="pera-top">Mollit anim laborum duis au dolor in voluptate velit ess cillum dolore eu lore dsu quality mollit anim laborumuis au dolor in voluptate velit cillum.</p>
                             <p>Mollit anim laborum.Duis aute irufg dhjkolohr in re voluptate velit esscillumlore eu quife nrulla parihatur. Excghcepteur signjnt occa cupidatat non inulpadeserunt mollit aboru. temnthp incididbnt ut labore mollit anim laborum suis aute.</p>
-                            <a href="about.html" class="btn post-btn">Post a job</a>
+                            <a href="Login.aspx" class="btn post-btn">Post a job</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 col-lg-6">
+                <div class="col-xl-5 col-lg-6">
                     <div class="support-location-img">
                         <img src="../assets/img/service/support-img.jpg" alt="">
-                        <div class="support-img-cap text-center">
-                            <p>Since</p>
-                            <span>1994</span>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Support Company End-->
-    <!-- Blog Area Start -->
-    <div class="home-blog-area blog-h-padding">
-        <div class="container">
-            <!-- Section Tittle -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-tittle text-center">
-                        <span>Our latest blog</span>
-                        <h2>Our recent news</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6">
-                    <div class="home-blog-single mb-30">
-                        <div class="blog-img-cap">
-                            <div class="blog-img">
-                                <img src="../assets/img/blog/home-blog1.jpg" alt="">
-                                <!-- Blog date -->
-                                <div class="blog-date text-center">
-                                    <span>24</span>
-                                    <p>Now</p>
-                                </div>
-                            </div>
-                            <div class="blog-cap">
-                                <p>|   Properties</p>
-                                <h3><a href="single-blog.html">Footprints in Time is perfect House in Kurashiki</a></h3>
-                                <a href="#" class="more-btn">Read more »</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6">
-                    <div class="home-blog-single mb-30">
-                        <div class="blog-img-cap">
-                            <div class="blog-img">
-                                <img src="../assets/img/blog/home-blog2.jpg" alt="">
-                                <!-- Blog date -->
-                                <div class="blog-date text-center">
-                                    <span>24</span>
-                                    <p>Now</p>
-                                </div>
-                            </div>
-                            <div class="blog-cap">
-                                <p>|   Properties</p>
-                                <h3><a href="single-blog.html">Footprints in Time is perfect House in Kurashiki</a></h3>
-                                <a href="#" class="more-btn">Read more »</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Blog Area End -->
+   
+        
 
 </main>
 

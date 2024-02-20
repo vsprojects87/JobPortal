@@ -54,7 +54,7 @@
                             <div class="col-lg-3 col-md-2">
                                 <!-- Logo -->
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="Default.aspx">
                                         <img src="../assets/img/logo/logo.png" alt=""></a>
                                 </div>
                             </div>
@@ -67,14 +67,6 @@
                                                 <li><a href="Default.aspx">Home</a></li>
                                                 <li><a href="JobListing.aspx">Find a Jobs </a></li>
                                                 <li><a href="About.aspx">About</a></li>
-                                                <li><a href="#">Page</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="blog.html">Blog</a></li>
-                                                        <li><a href="single-blog.html">Blog Details</a></li>
-                                                        <li><a href="elements.html">Elements</a></li>
-                                                        <li><a href="JobDetails.aspx">job Details</a></li>
-                                                    </ul>
-                                                </li>
                                                 <li><a href="Contact.aspx">Contact</a></li>
                                             </ul>
                                         </nav>
@@ -132,12 +124,11 @@
                                     <ul>
                                         <li>
                                             <p>
-                                                Address :Your address goes
-                                        here, your demo address.
+                                                Address : Nashik , Maharashtra
                                             </p>
                                         </li>
-                                        <li><a href="#">Phone : +8880 44338899</a></li>
-                                        <li><a href="#">Email : info@colorlib.com</a></li>
+                                        <li><a href="#">Phone : +91 8767512509</a></li>
+                                        <li><a href="#">Email : vs.scala.619@gmail.com</a></li>
                                     </ul>
                                 </div>
 
@@ -151,7 +142,6 @@
                                         <li><a href="#">View Project</a></li>
                                         <li><a href="#">Contact Us</a></li>
                                         <li><a href="#">Testimonial</a></li>
-                                        <li><a href="#">Proparties</a></li>
                                         <li><a href="#">Support</a></li>
                                     </ul>
                                 </div>
@@ -167,32 +157,13 @@
                                     <!-- Form -->
                                     <div class="footer-form">
                                         
-                                        <div id="mc_embed_signup">
-
-                                            <%--<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp; id=92a4423d01"  method="get" class="subscribe_form relative mail_part">--%>
-
-                                            <div class="subscribe_form relative mail_part">
-                                                
-                                                <%--<input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
-                                                    class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
-                                                    onblur="this.placeholder = ' Email Address '">--%>
-
-                                                <div class="form-icon">
-                                                   <%-- <button type="submit" name="submit" id="newsletter-submit"
-                                                        class="email_icon newsletter-submit button-contactForm">
-                                                        <img src="../assets/img/icon/form.png" alt=""></button>--%>
-                                                </div>
-                                                <div class="mt-10 info"></div>
-                                                <%--</form>--%>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--  -->
-                    <div class="row footer-wejed justify-content-between">
+<%--                    <div class="row footer-wejed justify-content-between">
                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                             <!-- logo -->
                             <div class="footer-logo mb-20">
@@ -219,7 +190,7 @@
                                 <p>Talented Hunter</p>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
                 </div>
             </div>
             <!-- footer-bottom area -->
@@ -232,7 +203,7 @@
                                     <p>
                                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                         Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                                        All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i>by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                        All rights reserved | Made with&nbsp<i class="fa fa-heart" aria-hidden="true"></i> by Vaibhav Awasarkar <a href="#" target="_blank"></a>
                                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                     </p>
                                 </div>
